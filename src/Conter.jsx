@@ -1,8 +1,13 @@
-import { useState  } from 'react'
+import { useState ,useEffect } from 'react'
 
 const Conter = ({step}) => {
 
+
     const [count, setCount] = useState(step);
+
+    useEffect(() => {
+        console.log("step value is: ", count);
+    }, [count])
 
     const incrmeter = () => {
         setCount(count + step);
